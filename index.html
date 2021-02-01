@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | Profile card component</title>
+	<style type="text/css">
+		@media (max-width: 768px){
+			body{
+				width: 375%;
+			}
+			#container{
+				background-image: none;
+			}
+		}
+		body{
+			width: 1440px;
+			color: hsl(227, 10%, 46%);
+			font-size: 18px;
+			font-family: 'Kumbh Sans',sans-serif; 
+			font-weight: 400;
+		}
+		#container{
+			padding-top: 5%;
+			padding-bottom: 5%;
+			background-color: hsl(185, 75%, 39%);
+			background-image:url("images/bg-pattern-top.svg"),url("images/bg-pattern-bottom.svg");
+			background-repeat: no-repeat, no-repeat;
+			background-position: -50% 140% ,150% -55%;
+		}
+		#main{
+			background-color: white;
+			border-radius: 10px;
+			width: 24%;
+			background-image: url("images/bg-pattern-card.svg");
+			background-repeat: no-repeat;
+			background-size: auto;
+		}
+		#image{
+			padding-top: 30%;
+			overflow: hidden;
+			text-align: center;	
+		}
+		img{
+			border-radius: 100px;
+			border : 5px solid white;
+			top: 30%;
+		}
+		b{
+			color: hsl(229, 23%, 23%);
+			font-weight: 700;
+		}
+		hr{
+			color: hsl(0, 0%, 59%);
+			border: 1px solid;
+		}
+		.Followers{
+			padding-left: 3%;
+		
+		}
+		.Likes{
+			padding-left: 20%;
+		}
+		.Photos{
+			padding-left: 15%;
+		}
+	    .attribution { font-size: 11px; text-align: center; }
+	    .attribution a { color: hsl(228, 45%, 44%); }
+	</style>
+</head>
+<body>
+<div align="center" id="container">
+	<div id="main">
+		<div id="image">
+			<img src="images/image-victor.jpg">
+		</div>
+		<div>
+			<b>Victor Crest</b> 26
+		</div>
+		<div>
+			London
+		</div>
+		<hr>
+		<div align="center">
+		<p >
+				<b class="Followers">80K</b>
+				<b class="Likes">803K</b>
+				<b class="Photos">1.4K</b>
+			<br>
+				<span class="Followers">Followers</span> 
+				<span class="Likes" style="padding-left: 12.5%">Likes</span>
+				<span class="Photos">Photos</span>	
+		</p>
+		</div> <br>
+	</div>
+</div>
+	<div class="attribution">
+    	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    	Coded by <a href="#">Enoch Samuel</a>.
+	</div>
+</body>
+</html>
