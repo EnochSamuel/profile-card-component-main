@@ -6,98 +6,101 @@
   	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<title>Frontend Mentor | Profile card component</title>
 	<style type="text/css">
-		@media (max-width: 768px){
+		@media (max-width: 46.01rem){
 			body{
-				width: 375px;
+				width: 22.5rem;
 			}
 			#container{
 				background-image: none;
 			}
 		}
-		body{
-			width: 1440px;
-      height: 100vh;
-			color: hsl(227, 10%, 46%);
-			font-size: 18px;
-			font-family: 'Kumbh Sans',sans-serif; 
-			font-weight: 400;
+		#container, #profile, #data, section{
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
+		body{
+			width: 86.4rem;
+			line-height: 150%;
+    	}
 		#container{
-			padding-top: 20%;
-			padding-bottom: 20%;
+			height: 100vh;
+			font-size: 18px;
+			font-family: 'Kumbh Sans',sans-serif;
+			color: hsl(229, 23%, 23%);
+			font-weight: 700;		 
 			background-color: hsl(185, 75%, 39%);
 			background-image:url("images/bg-pattern-top.svg"),url("images/bg-pattern-bottom.svg");
 			background-repeat: no-repeat, no-repeat;
-			background-position: -300px -375px ,700px 475px;
+			background-position: -18rem -31.5rem ,42rem 21rem;
+	
 		}
 		#main{
+
 			background-color: white;
 			border-radius: 10px;
-			width: 346px;
 			background-image: url("images/bg-pattern-card.svg");
 			background-repeat: no-repeat;
 			background-size: auto;
+			height: 20.5rem;
+			width: 21.5rem;	
 		}
-		#image{
-			padding-top: 30%;
-			overflow: hidden;
-			text-align: center;	
+		#profile{
+			padding-top: 5.5rem;
+			flex-direction: column;
 		}
 		img{
-			border-radius: 100px;
+			border-radius: 50%;
 			border : 5px solid white;
-			top: 30%;
 		}
-		b{
-			color: hsl(229, 23%, 23%);
-			font-weight: 700;
+		section{
+			flex: 1;
+			flex-direction: column;
 		}
+		section . article{
+			margin: auto;	
+		}
+		
 		hr{
 			color: hsl(0, 0%, 59%);
-			border: 1px solid;
-		}
-    span{
-      font-size: 12px;
-    }
-		.Followers{
-			padding-left: 5%;
-		
-		}
-		.Likes{
-			padding-left: 15%;
-		}
-		.Photos{
-			padding-left: 15%;
-		}
+		}	
+		.labels, span{
+    		color: hsl(227, 10%, 46%);
+			font-weight: 400;	
+    	}
+	    .labels{
+    		font-size: 12px;
+    	}
 	    .attribution { font-size: 11px; text-align: center; }
 	    .attribution a { color: hsl(228, 45%, 44%); }
 	</style>
 </head>
 <body>
-<div align="center" id="container">
+<div id="container">
 	<div id="main">
-		<div id="image">
-			<img src="images/image-victor.jpg">
+		<div id="profile">
+		   <img alt="image-victor" src="images/image-victor.jpg">
+			<article>Victor Crest<span> 26</span></article>
+			<article class="labels">London</article>
+			
 		</div>
-		<div>
-			<b>Victor Crest</b> 26
-		</div>
-		<div>
-      <span>London</span>
-      <p></p>
-		</div>
+		
 		<hr>
-		<div align="center">
-		<p >
-				<b class="Followers">80K</b>
-				<b class="Likes">803K</b>
-				<b class="Photos">1.4K</b>
-			<br>
-				<span class="Followers" style="padding-left: 5%;">Followers</span> 
-				<span class="Likes" style="padding-left: 15%;">Likes</span>
-				<span class="Photos" style="padding-left: 20%;">Photos</span>	
-		</p>
-		</div> <br>
+
+		<div id="data">
+			<section>
+				<article >80K</article>
+				<article class="labels" >Followers</article>
+			</section>
+			<section>
+				<article >803K</article>
+				<article class="labels" >Likes</article>
+			</section>
+			<section>
+				<article >1.4K</article>			
+				<article class="labels" >Photos</article>	
+			</section>
+		</div>
 	</div>
 </div>
 	<div class="attribution">
