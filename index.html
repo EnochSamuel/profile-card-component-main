@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<title>Frontend Mentor | Profile card component</title>
-	<style type="text/css">
+	<style>
 		@media (max-width: 46.01rem){
 			body{
 				width: 22.5rem;
@@ -21,8 +21,7 @@
 		}
 		body{
       height: 100vh;
-			width: 86.4rem;
-			line-height: 150%;
+			width: 1440px;
     	}
 		#container{
 			height: 100%;
@@ -33,24 +32,24 @@
 			background-color: hsl(185, 75%, 39%);
 			background-image:url("images/bg-pattern-top.svg"),url("images/bg-pattern-bottom.svg");
 			background-repeat: no-repeat, no-repeat;
-			background-position: -18rem -31.5rem ,42rem 21rem;
+			background-position: -18rem -31.5rem ,45rem 21rem;
 	
 		}
-		#main{
-
+		#card{
 			background-color: white;
-			border-radius: 10px;
 			background-image: url("images/bg-pattern-card.svg");
 			background-repeat: no-repeat;
 			background-size: auto;
-			height: 20.5rem;
-			width: 21.5rem;	
+			width: 350px;	
+      border-radius: 15px;
 		}
 		#profile{
-			padding-top: 5.5rem;
 			flex-direction: column;
+      margin-bottom: 1rem;
+      line-height: 125%;
 		}
 		img{
+      margin: 5.5rem 0 1rem 0;
 			border-radius: 50%;
 			border : 5px solid white;
 		}
@@ -58,32 +57,34 @@
 			flex: 1;
 			flex-direction: column;
 		}
-		section . article{
-			margin: auto;	
-		}
-		
 		hr{
 			color: hsl(0, 0%, 59%);
-		}	
+      opacity: .1;
+		}
+    #data{
+      margin: 1.5rem;
+    }	
 		.labels, span{
-    		color: hsl(227, 10%, 46%);
+    	color: hsl(227, 10%, 46%);
 			font-weight: 400;	
-    	}
-	    .labels{
-    		font-size: 12px;
-    	}
-	    .attribution { font-size: 11px; text-align: center; }
-	    .attribution a { color: hsl(228, 45%, 44%); }
+      opacity: .6;
+    }
+  	.labels{
+    	font-size: .6rem;
+    }
+  	.attribution { font-size: 11px; text-align: center; }
+  	.attribution a { color: hsl(228, 45%, 44%); }
 	</style>
 </head>
 <body>
 <div id="container">
-	<div id="main">
+	<div id="card">
 		<div id="profile">
 		   <img alt="image-victor" src="images/image-victor.jpg">
-			<article>Victor Crest<span> 26</span></article>
-			<article class="labels">London</article>
-			
+       <section>
+    			<article>Victor Crest<span> 26</span></article>
+		    	<article class="labels">London</article>
+			</section>
 		</div>
 		
 		<hr>
