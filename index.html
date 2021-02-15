@@ -6,14 +6,15 @@
   	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<title>Frontend Mentor | Profile card component</title>
 	<style>
-		@media (max-width: 46.01rem){
+    *{
+      margin: 0;
+    }
+		@media (max-width: 750px){
 			body{
-				width: 22.5rem;
+				width: 375px;
 			}
-			#container{
-				background-image: none;
-        width: 22.5rem;
-        background-position: -18rem -31.5rem ,45rem 21rem;
+			#container, .attribution{
+        width: 375px;
 			}
 		}
 		#container, #profile, #data, section{
@@ -24,7 +25,8 @@
 		body{
       height: 100vh;
 			width: 1440px;
-    	}
+      line-height: 150%;
+  	}
 		#container{
 			height: 100%;
 			font-size: 18px;
@@ -34,7 +36,7 @@
 			background-color: hsl(185, 75%, 39%);
 			background-image:url("images/bg-pattern-top.svg"),url("images/bg-pattern-bottom.svg");
 			background-repeat: no-repeat, no-repeat;
-			background-position: -18rem -31.5rem ,45rem 21rem;
+			background-position: -60% 180% ,150% -125%;
 	
 		}
 		#card{
@@ -42,13 +44,12 @@
 			background-image: url("images/bg-pattern-card.svg");
 			background-repeat: no-repeat;
 			background-size: auto;
-			width: 350px;	
+			width: 330px;	
       border-radius: 15px;
 		}
 		#profile{
 			flex-direction: column;
       margin-bottom: 1rem;
-      line-height: 125%;
 		}
 		img{
       margin: 5.5rem 0 1rem 0;
@@ -59,23 +60,32 @@
 			flex: 1;
 			flex-direction: column;
 		}
+    .city{
+      font-size: 13px;
+    }
 		hr{
-			color: hsl(0, 0%, 59%);
+      border-top: 1px solid hsl(0, 0%, 59%);
       opacity: .1;
-		}
+    }
     #data{
       margin: 1.5rem;
     }	
-		.labels, span{
+		.labels, .city, span{
     	color: hsl(227, 10%, 46%);
 			font-weight: 400;	
-      opacity: .6;
+      opacity: .75;
     }
   	.labels{
+      letter-spacing: .1rem; 
     	font-size: .6rem;
     }
-  	.attribution { font-size: 11px; text-align: center; }
-  	.attribution a { color: hsl(228, 45%, 44%); }
+  	.attribution { 
+      font-size: 11px; 
+      text-align: center; 
+    }
+  	.attribution a {
+    color: hsl(228, 45%, 44%); 
+    }
 	</style>
 </head>
 <body>
@@ -85,7 +95,7 @@
 		   <img alt="image-victor" src="images/image-victor.jpg">
        <section>
     			<article>Victor Crest<span> 26</span></article>
-		    	<article class="labels">London</article>
+		    	<article class="city">London</article>
 			</section>
 		</div>
 		
